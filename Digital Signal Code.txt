@@ -1,0 +1,24 @@
+//Digital Signal
+int LED = 12;
+int SW=9;
+int D1=300; //Fast
+int D2= 2000; //Low
+
+void setup() {
+ pinMode(LED,OUTPUT);
+ pinMode(SW,INPUT_PULLUP); 
+}
+
+void loop() {
+ int D;
+  if (digitalRead(SW)==1){
+    D=D1; }
+  else {
+    D=D2; }
+  digitalWrite(LED,HIGH);
+  delay(D);
+  
+  digitalWrite(LED,LOW);
+  delay(D);
+  
+}
